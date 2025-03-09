@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Karla", sans-serif;
+    background-color: #0b131e;
+    height: 120vh;
+}
+
+.container{
+    display: flex;
+}
+
+.sidebar{
+    width: 100px;
+    height: 108vh;
+    background-color: #202b3b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.main-area{
+    width: 60%;
+    margin-left: 25px;
+    margin-top: 32px;
+    height: 108vh;
+    background-color: #0b131e;
+}
+
+.search{
+    width: 100%;
+    height: 50px;
+    background-color: #202b3b;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 16px;
+    color: white;
+    align-items: center;
+}
+
+.city-name{
+    color: white;
+    background-color: #0b131e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    height: 220px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.heading{
+    margin-top: 10px;
+}
+
+.forecast{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #202b3b;
+    border-radius: 20px;
+}
+
+.forecast-title{
+    color: white;
+}
+
+.forecast-list ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    list-style: none;
+    color: white;
+}
+
+
+.item-list ul li{
+    color: white;
+    text-align: center;
+    list-style: none;
+    margin-bottom: 60px;
+}
+
+.item-list ul li i{
+    font-size: 25px;
+}
+
+.icon img{
+    width: 80px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.city-name img{
+    width: 150px;
+}
+
+.madrid-inner{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.air-condition{
+    margin-top: 10px;
+    height: 225px;
+    padding: 20px;
+    background-color: #202b3b;
+    border-radius: 20px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.air-title{
+    color: white;
+}
+
+.first{
+    color: white;
+}
+
+.first p i{
+    margin-right: 10px;
+}
+
+.first h3{
+    margin-left: 28px;
+}
+
+.figures p{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.forecast-list img{
+    width: 40px;
+}
+
+.weekly-forecast{
+    background-color: #202b3b;
+    color: white;
+    width: 30%;
+    padding: 20px;
+    margin-top: 100px;
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.weekly{
+    margin-top: 20px;
+}
+
+.textcon{
+    vertical-align: middle;
+}
+
+.weekly ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 47px;
+    
+}
+
+.weekly img{
+    width: 30px;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+     rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+       crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Weather Man</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="icon">
+                <img src="/images/icon.png" alt="">
+            </div>
+
+            <div class="item-list">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-cloud-bolt"></i>
+                        <p>Weather</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-city"></i>
+                        <p>Cities</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <p>Maps</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-sliders"></i>
+                        <p>Settings</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <% if (locals.data) {%>
+        <div class="main-area">
+            <div class="search">
+                
+            </div>
+            <div class="city-name">
+                <div class="madrid">
+                    <div class="madrid-inner">
+                        <div class="heading">
+                            <h1><%= data.name %></h1>
+                            <p>Chances of rain: 0%</p>
+                            <p>Weather: <%= data.weather[0].main %></p>
+                            <p>Description: <%= data.weather[0].description %></p>
+                        </div>
+                        <div class="figures">
+                            <p><%= data.main.temp %>&deg;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sunny">
+                    <img src="/images/sun2.png" alt="">
+                </div>
+            </div>
+            <div class="forecast">
+                <div class="forecast-title">
+                    <p>TODAY'S FORECAST</p>
+                </div>
+                <div class="forecast-list">
+                    <ul>
+                        <li>
+                            <p>6:00 AM</p>
+                            <img src="/images/sun2.png" alt="">
+                            <h2>25&deg;</h2>
+                            <hr>
+                        </li>
+                        
+                        <li>
+                            <p>9:00 AM</p>
+                            <img src="/images/sun2.png" alt="">
+                            <h2>28&deg;</h2>
+                            <hr>
+                        </li>
+    
+                        <li>
+                            <p>12:00 PM</p>
+                            <img src="/images/sun2.png" alt="">
+                            <h2>33&deg;</h2>
+                            <hr>
+                        </li>
+    
+                        <li>
+                            <p>3:00 PM</p>
+                            <img src="/images/item.png" alt="">
+                            <h2>35&deg;</h2>
+                            <hr>
+                        </li>
+    
+                        <li>
+                            <p>6:00 AM</p>
+                            <img src="/images/item.png" alt="">
+                            <h2>32&deg;</h2>
+                            <hr>
+                        </li>
+    
+                        <li>
+                            <p>6:00 AM</p>
+                            <img src="/images/item.png" alt="">
+                            <h2>25&deg;</h2>
+                            <hr>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="air-condition">
+                <div class="air-title">
+                    <p>AIR CONDITIONS</p>
+                </div>
+                <div class="grid">
+                    <div class="first">
+                        <p><i class="fa-solid fa-temperature-high"></i> Real Feel</p>
+                        <h3><%= data.main.feels_like %>&deg;</h3>
+                    </div>
+                    <div class="first">
+                        <p><i class="fa-solid fa-wind"></i>Wind</p>
+                        <h3><%= data.wind.speed %> m/h</h3>
+                    </div>
+                    <div class="first">
+                        <p><i class="fa-solid fa-droplet"></i> Chance of rain</p>
+                        <h3>0%</h3>
+                    </div>
+                    <div class="first">
+                        <p><i class="fa-solid fa-sun"></i> UV Index</p>
+                        <h3>3</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="weekly-forecast">
+            <div class="weekly-title">
+                <p>7-DAY FORECAST</p>
+            </div>
+            <div class="weekly">
+                <ul>
+                    <li>
+                        <p>Today</p>
+                        <p class="textcon"><img src="/images/sun2.png" alt="">Sunny</p>
+                        <p>36/22</p>
+                        <hr>
+                    </li>
+                    <li>
+                        <p>Sun</p>
+                        <p><img src="/images/item.png" alt="">Cloudy</p>
+                        <p>36/22</p>
+                        <hr>
+                    </li>
+                    <li>
+                        <p>Mon</p>
+                        <p><img src="/images/item.png" alt="">Cloudy</p>
+                        <p>36/22</p>
+                        <hr>
+                    </li>
+                    <li>
+                        <p>Tue</p>
+                        <p><img src="/images/sun2.png" alt="">Sunny</p>
+                        <p>36/22</p>
+                        <hr>
+                    </li>
+                    <li>
+                        <p>Wen</p>
+                        <p><img src="/images/item.png" alt="">cloudy</p>
+                        <p>36/22</p>
+                        <hr>
+                    </li>
+                    <li>
+                        <p>Thu</p>
+                        <p><img src="/images/sun2.png" alt="">Sunny</p>
+                        <p>36/22</p>
+                        <hr>
+                    </li>
+                    <li>
+                        <p>Fri</p>
+                        <p><img src="/images/item.png" alt="">Cloudy</p>
+                        <p>36/22</p>
+                        <hr>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <% } %>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
